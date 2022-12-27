@@ -15,18 +15,18 @@ const ingredients = [
 const ingredientsContainer = document.querySelector('#ingredients');
 
 // Function to create <li> element
-function createLiElement(ingridientTitle) {
+function createLiElement(ingredientTitle) {
   const liEl = document.createElement('li');
 
   liEl.classList.add('item');
-  liEl.textContent = ingridientTitle;
+  liEl.textContent = ingredientTitle;
 
   return liEl;
 }
 
 // Use map() to create new array with li elements
-const ingredientsToAppend = ingredients.map((ingridientTitle) => {
-  return createLiElement(ingridientTitle);
+const ingredientsToAppend = ingredients.map((ingredientTitle) => {
+  return createLiElement(ingredientTitle);
 });
 
 // SPREAD and append array with li elements to the html container
