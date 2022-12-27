@@ -12,3 +12,24 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Get container-element
+const gallery = document.querySelector('.gallery');
+
+// Function for creation one single li -> img
+const makeLiWithInsertedInImg = (image) => {
+  const { url, alt } = image;
+  return `
+    <li class="gallery__item">
+      <img class="gallery__img" src="${url}" alt="${alt}"/>
+    </li> 
+  `;
+};
+
+// Create, insert and convert to string all the elements
+const liElementsWithInsertedInImages = images
+  .map(makeLiWithInsertedInImg)
+  .join('');
+
+// Append result to the container element
+gallery.insertAdjacentHTML('afterbegin', liElementsWithInsertedInImages);
