@@ -27,6 +27,7 @@ function createDefineElement(tagName) {
 
 // * function to create elements *
 function createBoxes(amount) {
+  console.log(amount);
   if (amount > 0) {
     for (let i = 0; i < amount; i++) {
       // const divEl = document.createElement('div');
@@ -46,19 +47,20 @@ function createBoxes(amount) {
 }
 
 createBtn.addEventListener('click', () => {
-  console.log('CREATE BTN');
   createBoxes(inputNumber.value);
 });
 
 // * function to destroy elements *
 function destroyBoxes(elementToClear) {
   elementToClear.innerHTML = '';
+  divElements.length = 0;
+  basicWidth = 30;
+  basicHeight = 30;
 }
 
 // * clear array with elements when click the button
 destroyBtn.addEventListener('click', () => {
   // * check if container has elements
-  console.log('DELETE BTN');
   if (containerEl.children.length > 0) {
     destroyBoxes(containerEl);
   }
