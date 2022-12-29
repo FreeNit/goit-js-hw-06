@@ -27,7 +27,6 @@ function createDefineElement(tagName) {
 
 // * function to create elements *
 function createBoxes(amount) {
-  console.log(amount);
   if (amount > 0) {
     for (let i = 0; i < amount; i++) {
       // const divEl = document.createElement('div');
