@@ -46,6 +46,7 @@ function createBoxes(amount) {
 }
 
 createBtn.addEventListener('click', () => {
+  console.log('CREATE BTN');
   createBoxes(inputNumber.value);
 });
 
@@ -57,6 +58,7 @@ function destroyBoxes(elementToClear) {
 // * clear array with elements when click the button
 destroyBtn.addEventListener('click', () => {
   // * check if container has elements
+  console.log('DELETE BTN');
   if (containerEl.children.length > 0) {
     destroyBoxes(containerEl);
   }
