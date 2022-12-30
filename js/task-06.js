@@ -1,6 +1,6 @@
 // Get input field
 const inputEl = document.querySelector('#validation-input');
-const SYMBOL_LENGTH = inputEl.dataset.length;
+const SYMBOL_LENGTH = parseInt(inputEl.dataset.length);
 
 // Function to remove class (practice to create function)
 function removeClass(element, className) {
@@ -14,7 +14,7 @@ function addClass(element, className) {
 
 inputEl.addEventListener('blur', () => {
   // Check the length of input
-  if (inputEl.value.length >= SYMBOL_LENGTH) {
+  if (inputEl.value.length === SYMBOL_LENGTH) {
     // Check if 'invalid' class present and remove it if YES
     if (inputEl.classList.contains('invalid')) {
       removeClass(inputEl, 'invalid');
